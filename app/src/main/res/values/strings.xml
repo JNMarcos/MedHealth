@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">MedHealth</string>
     <string name="title_activity_maps">Map</string>
+    <string name="acao_pesquisar">Pesquisar</string>
+    <string name="acao_info">Info</string>
 </resources>
