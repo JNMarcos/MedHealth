@@ -50,14 +50,14 @@ public class UnidadeDeSaudeListFragment extends ListFragment {
         super.onListItemClick(l, v, position, id);
 
         Activity activity = getActivity();
-        if(activity instanceof AoClicarNoHotel){
+        if(activity instanceof AoClicarNaUnidadeDeSaude){
             UnidadeDeSaude unidadeDeSaude = (UnidadeDeSaude) l.getItemAtPosition(position);
-            AoClicarNoHotel listener = (AoClicarNoHotel)activity;
-            listener.clicouNoHotel(unidadeDeSaude);
+            AoClicarNaUnidadeDeSaude listener = (AoClicarNaUnidadeDeSaude) activity;
+            listener.clicouNaUnidadeDeSaude(unidadeDeSaude);
         }
     }
-    public interface AoClicarNoHotel{
-        void clicouNoHotel(UnidadeDeSaude unidadeDeSaude);
+    public interface AoClicarNaUnidadeDeSaude{
+        void clicouNaUnidadeDeSaude(UnidadeDeSaude unidadeDeSaude);
     }
 
 }
