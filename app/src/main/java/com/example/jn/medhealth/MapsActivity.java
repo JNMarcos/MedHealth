@@ -1,7 +1,10 @@
-package com.example.jn.medhealth;
+/*package com.example.jn.medhealth;
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -12,9 +15,12 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,
+        SearchView.OnQueryTextListener, MenuItemCompat.OnActionExpandListener{
 
     private GoogleMap mMap;
+    private FragmentManager mFragmentManager;
+    private UnidadeDeSaudeListFragment mListFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +30,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+        mFragmentManager = getSupportFragmentManager();
+        mListFragment = (UnidadeDeSaudeListFragment)
+                mFragmentManager.findFragmentById(R.id.fragmentLista);
     }
-
 
     /**
      * Manipulates the map once available.
@@ -36,7 +44,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
-    @Override
+/*    @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
@@ -49,6 +57,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu_saude, menu);
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView)
+                MenuItemCompat.getActionView(searchItem);
+        searchView.setOnQueryTextListener(this);
+        MenuItemCompat.setOnActionExpandListener(searchItem,this);
         return true;
     }
 
@@ -56,4 +69,29 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     public boolean onOptionsItemSelected(MenuItem item){
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public boolean onQueryTextSubmit(String s){
+        return true;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String s){
+        mListFragment.buscar(s);
+        return false;
+    }
+
+    @Override
+    public boolean onMenuItemActionExpand(MenuItem item){
+        return true; //para expandir a view
+    }
+
+    @Override
+    public boolean onMenuItemActionCollapse(MenuItem item){
+        mListFragment.limpaBusca();
+        return true;
+    }
+
+
 }
+*/
