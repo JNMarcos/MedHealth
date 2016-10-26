@@ -17,6 +17,8 @@
         <item>Seção 3</item>
     </string-array>
 
+    <string name="sobre">Você concorda com todos os termos e política de privacidade do app MedHealth.\n\nUm app desenvolvido por GMJApp.</string>
+    <string name="versao">Versão 0.1</string>
     <array name="cores_bg">
         <item>#FF0000</item>
         <item>#FFFF00</item>
