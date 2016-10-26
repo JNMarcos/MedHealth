@@ -41,7 +41,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".UnidadeDeSaudeDetalheActivity"
+        <activity android:name=".TelaMapaActivity"
             android:parentActivityName=".UnidadeDeSaudeActivity">
         </activity>
     </application>

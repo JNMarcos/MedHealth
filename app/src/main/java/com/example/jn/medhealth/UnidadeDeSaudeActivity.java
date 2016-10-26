@@ -76,6 +76,7 @@ public class UnidadeDeSaudeActivity extends AppCompatActivity
         getMenuInflater().inflate(R.menu.menu_saude, menu);
         return super.onCreateOptionsMenu(menu);
     }
+
     //só podemos ter um menu aberto
     @Override
     public boolean onPrepareOptionsMenu(Menu menu){

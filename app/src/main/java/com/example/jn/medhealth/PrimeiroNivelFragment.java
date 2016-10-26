@@ -52,10 +52,9 @@ public class PrimeiroNivelFragment extends Fragment
         super.onCreate(savedInstanceState);
         mAcoes = new LinkedHashMap<>();
         String[] opcoes = getResources().getStringArray(R.array.opcoes);
-        mAcoes.put(opcoes[0], TelaCadastroActivity.class);
-        //mAcoes.put(opcoes[1], TelaEntrarActivity.class);
-       // mAcoes.put(opcoes[2], TelaOpiniaoActivity.class);
-       // mAcoes.put(opcoes[3], TelaSobreActivity.class);
+        mAcoes.put(opcoes[0], TelaMapaActivity.class);
+        mAcoes.put(opcoes[1], TelaOpiniaoActivity.class);
+        mAcoes.put(opcoes[2], TelaSobreActivity.class);
     }
 
 
