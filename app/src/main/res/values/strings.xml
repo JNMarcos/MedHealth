@@ -3,4 +3,29 @@
     <string name="title_activity_maps">Map</string>
     <string name="acao_pesquisar">Pesquisar</string>
     <string name="acao_info">Info</string>
+
+    <string-array name="opcoes">
+        <item>Cadastrar</item>
+        <item>Entrar</item>
+        <item>Opiniao</item>
+        <item>Sobre</item>
+    </string-array>
+
+    <string-array name="secoes">
+        <item>Seção 1</item>
+        <item>Seção 2</item>
+        <item>Seção 3</item>
+    </string-array>
+
+    <array name="cores_bg">
+        <item>#FF0000</item>
+        <item>#FFFF00</item>
+        <item>#0000FF</item>
+    </array>
+
+    <array name="cores_texto">
+        <item>#F44336</item>
+        <item>#4CAF50</item>
+        <item>#03A9F4</item>
+    </array>
 </resources>
